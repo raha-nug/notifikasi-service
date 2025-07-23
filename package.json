@@ -1,0 +1,18 @@
+{
+  "name": "notifikasi-service",
+  "version": "1.0.0",
+  "description": "Menangani semua hal yang berkaitan dengan notifikasi",
+  "license": "ISC",
+  "author": "Rival Nugraha",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.12.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5"
+  }
+}
