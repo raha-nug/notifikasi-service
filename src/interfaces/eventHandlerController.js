@@ -17,11 +17,7 @@ export const handleEvent = async (req, res) => {
         await appService.handleHasilSeleksi(payload);
         break;
       default:
-        console.warn(`Event type tidak dikenali: ${eventType}`);
-        // Kirim status 200 agar pengirim event tidak mencoba lagi
-        return res
-          .status(200)
-          .json({ message: "Event type tidak dikenali, diabaikan." });
+        await appService.handleOtherMessage(payload)
     }
 
     res.status(200).json({ message: `Event ${eventType} berhasil ditangani.` });
